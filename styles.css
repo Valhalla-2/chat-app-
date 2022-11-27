@@ -1,232 +1,288 @@
-:root {
-    /* for text inside chat app */
-    --pale-violet: hsl(276, 100%, 81%); /*sub-heading at the top of the app UI*/
-    --moderate-violet:hsl(276, 55%, 52%); /*chat on the left*/
-    --d-violet-blue: hsl(271, 15%, 43%); /*chat on the right*/
-    --grayish-blue:hsl(206, 6%, 79%); /* placeholder text*/
-    --vd-violet:hsl(271, 36%, 24%); /*main heading*/
-    --d-grayish-violet:hsl(270, 7%, 64%); /*paragraph*/
-
-    /* for gradients */
-    --light-magenta:hsl(293, 100%, 63%);
-    --light-violet: hsl(264, 100%, 61%);
-
-    /* secondary colors */
-    --white:hsl(0, 0%, 100%);
-    --l-grayish-violet:hsl(270, 20%, 96%);  /*app background*/
-    --vd-desaturated-violet: hsl(271, 36%, 24%); /*submit btn background*/
-    --v-light-magenta:hsl(289, 100%, 72%) ;  /* radio btn outline */
+:root { /* for text inside chat app */
+  --pale-violet: hsl(276, 100%, 81%); /*sub-heading at the top of the app UI*/
+  --moderate-violet: hsl(276, 55%, 52%); /*chat on the left*/
+  --d-violet-blue: hsl(271, 15%, 43%); /*chat on the right*/
+  --grayish-blue: hsl(206, 6%, 79%); /* placeholder text*/
+  --vd-violet: hsl(271, 36%, 24%); /*main heading*/
+  --d-grayish-violet: hsl(270, 7%, 64%); /*paragraph*/ 
+  --light-magenta: hsl(293, 100%, 63%); /* for gradients */
+  --light-violet: hsl(264, 100%, 61%); /* secondary colors */
+  --white: hsl(0, 0%, 100%);
+  --l-grayish-violet: hsl(270, 20%, 96%); /*app background*/
+  --vd-desaturated-violet: hsl(271, 36%, 24%); /*submit btn background*/
+  --v-light-magenta: hsl(289, 100%, 72%); /* radio btn outline */
 }
 
 *, html, body {
-    padding: 0;
-    margin: 0; /*for removing the horizontal scrolling*/
-    box-sizing: border-box;
-    font-size: 16px;
+  /*css reset*/
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
 html, body {
-    width: 100%;
-    min-height: 100vh; /*setting up the height according to the viewport*/
-    font-family: 'Rubik', sans-serif;
-   
+  width: 100%;
+  min-height: 100vh;/*setting up the height according to the viewport*/
+  font-family: 'Rubik', sans-serif;
 }
-  .bg-pink {
-    width:20rem;
-    height:35rem;
-    background :linear-gradient(180deg, var(--light-magenta), var(--light-violet) );
-    border-radius:15rem;
-    position:absolute;
-    top:-10rem;
-    left:-10rem;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+main.content::before {
+    content: "";
+    width: 80%;
+    height: 45rem;
+    background: linear-gradient(180deg, var(--light-magenta), var(--light-violet));
+    border-radius: 20rem;
+    position: absolute;
+    top: -15rem;
+    left: -8rem;
     z-index: -999;
-  }
+}
 
-  .mobile {
-    max-width: 285px !important;
-    height:35rem;
-    margin: 5rem auto;
-    padding: 10px;
-    border-radius:2rem;
-    background-color:#fff;
-    box-shadow:3px 3px 6px rgba(0, 0, 0 , 0.1);
-  }
-  
-  .chat-app {
-    background-color:var(--l-grayish-violet);
-    border-radius:30px;
-    height: 100%;
-  }
-  
-  .profile {
-    background :linear-gradient(-90deg, var(--light-magenta), var(--light-violet) );
-    border-radius: 25px 25px 5px 5px;
-    display:flex;
-    flex-flow:column wrap;
-    align-items:center;
-  
-  }
+section {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+}
 
-  .profile-info {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
+.mobile {
+  max-width: 300px;
+  height: 35rem;
+  padding: 10px;
+  border-radius: 2rem;
+  background-color: #fff;
+  box-shadow: 15px 22px 40px hsl(300deg 1% 83%);
+  animation: mobile 1500ms ease-in-out 1 ;
+}
 
-  }
-  
-  .notch {
-    width: 50%;
-    height: 20px;
-    background-color: #fff;
-    margin: 0 auto;
-    border-radius: 0 0 15px 15px;
-  }
+.chat-app {
+  background-color: var(--l-grayish-violet);
+  border-radius: 30px;
+  height: 100%;
+}
 
-  .avatar {
-    width: 1.875rem;
-    margin-left: -60px;
-  }
+.profile {
+  background: linear-gradient(-90deg, var(--light-magenta), var(--light-violet));
+  border-radius: 25px 25px 5px 5px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
 
-  .avatar img {
-    width: 100%;
-    border-radius: 50%;
-    border: 2px solid #fff;
-  }
+.profile-info {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
 
-  .user-info {
-    margin-left: -60px;
-  }
+.notch {
+  width: 50%;
+  height: 20px;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 0 0 15px 15px;
+}
 
-  .username {
-    font-size: 14px;
-    color: var(--white);
-  }
+.avatar {
+  width: 1.875rem;
+  margin-left: -60px;
+}
 
-  .status {
-    font-size: 12px;
-    color: var(--grayish-blue);
-  }
+.avatar img {
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
 
-  .profile-info h1 p {
-    margin: 0;
-    font-size: 1rem;
-  }
+.user-info {
+  margin-left: -60px;
+}
 
+.username {
+  font-size: 14px;
+  color: var(--white);
+}
 
- .introduction {
+.status {
+  font-size: 10px;
+  color: var(--grayish-blue);
+}
+
+.profile-info h1 p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.introduction {
   text-align: center;
   padding: 2rem;
-  }
+  animation: intro 1100ms ease-in-out 1 ;
+}
 
-  .introduction h2 {
-    font-size: 2.5rem;
-    font-weight: 500;
-    color: var(--vd-desaturated-violet);
-  }
+.introduction h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--vd-desaturated-violet);
+}
 
-  .introduction p {
-    color: var(--d-grayish-violet);
-    line-height: 1.7;
-    margin-top: 2rem;
-  }
+.introduction p {
+  color: var(--d-grayish-violet);
+  line-height: 1.7;
+  margin-top: 2rem;
+}
 
-  .messages {
-    display: flex;
-    flex-flow: column wrap;
-    padding: 10px;
-  }
+.messages {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 10px;
+}
 
-  .messages div {
-    width: 65%;
-  }
+.messages p {
+  font-size: 0.5625rem;
+  padding: 8px 10px;
+  margin: 10px 0;
+  width: 70%;
+  animation: msg 2000ms ease-in-out 1;
+  transform-origin: bottom center;
+}
 
-  .messages p {
-    font-size: 0.5625rem;
-    padding: 8px 10px;
-    margin: 10px 0;
-  }
+.msg-from-sender p {
+  background-color: hsla(276, 100%, 81%, 0.3);
+  color: var(--moderate-violet);
+  border-radius: 15px 15px 15px 5px;
+}
 
-  .msg-from-sender p {
-    background-color: hsl(206, 6%, 90%);
-    color: var(--light-magenta);
-    border-radius: 15px 15px 15px 5px;
-  }
+.msg-from-receiver {
+  align-self: flex-end;
+}
 
-  .msg-from-receiver {
-    align-self: flex-end;
-  }
+.msg-from-receiver img {
+  width: 47px;
+  border-radius: 15px;
+}
 
-  .msg-from-receiver img {
-    width: 47px;
-    border-radius: 15px;
-  } 
+.msg-from-receiver p {
+  background-color: var(--white);
+  color: var(--vd-desaturated-violet);
+  border-radius: 15px 15px 5px 15px;
+  margin-left: auto;
+  box-shadow: 1px 2px 10px hsl(300deg 1% 83%);
+}
 
-  .msg-from-receiver p {
-    background-color: var(--white);
-    color: var(--vd-desaturated-violet);
-    border-radius: 15px 15px 5px 15px;
-  }
+.msg-from-receiver p:last-child  {
+  width: max-content;
+}
 
-  .messages div:nth-child(3) p:first-child  {
-    background-color: hsl(206, 6%, 90%);
-    color: var(--light-magenta);
-    margin: 10px 0;
-    border-radius: 15px 15px 15px 5px;
-    width: 95%;
-  }
-
-  .messages div:nth-child(3) p:nth-child(2), .messages div:nth-child(3) p:nth-child(3) {
-    background: linear-gradient(-90deg, var(--light-magenta), var(--light-violet) );
-    border-radius: 15px 15px 15px 5px;
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.messages div:nth-child(3) p:nth-child(2), .messages div:nth-child(3) p:nth-child(3) {
+  background: linear-gradient(-90deg, var(--light-magenta), var(--light-violet));
+  border-radius: 15px 15px 15px 5px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 80%;
 }
 
 .gradient-txt::before {
-    content: "";
-    width: 18px;
-    height: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
 }
 
-.bold-txt {
+.cost.bold-txt {
   font-weight: 900;
+  margin-left: auto;
 }
 
 input {
-    border: none;
-    border-radius: 1rem;
-    padding: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem;
 }
 
 input::placeholder {
-  color:rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
   font-size: 0.7rem;
+  text-indent:1rem;
 }
-  
-  
 
-@media screen and (min-width:578px) {
+@media screen and (min-width:768px) {
   main {
-  display: flex;
-  }
-
-  section {
-    flex: 0 1 auto;
-    width: 50%;
+    max-width: 865px;
+    min-height: 30rem;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    margin: 1rem;
+  }
+
+  main.content::before {
+    content: "";
+    width: 35%;
+    height: 65rem;
+    background: linear-gradient(180deg, var(--light-magenta), var(--light-violet));
+    border-radius: 25rem;
+    position: absolute;
+    top: -20rem;
+    left: -5rem;
+    z-index: -999;
+  }
+
+  section, .introduction {
     align-items: flex-start;
-  }
-
-  .introduction {
+    padding: 0;
     text-align: left;
+    flex:0 1 auto;
+    width: 50%;
   }
 
+}
+
+
+@keyframes mobile {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes intro {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes msg {
+  from {
+    transform: translateY(100%) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    
+  }
 }

@@ -18,7 +18,7 @@
 </head>
 
 <body>
-  <main>
+  <main class="content">
     <section class="chat-app-illustration">
       <div class="bg-pink"></div>
       <div class="mobile">
@@ -42,18 +42,23 @@
               <p>Could you send over some pictures of your dog, please?</p>
             </div>
             <div class=" msg-from-receiver">
-              <img src="images/dog-image-1.jpg" alt="">
-              <img src="images/dog-image-2.jpg" alt="">
-              <img src="images/dog-image-3.jpg" alt="">
+              <div class="dog-images">
+                <img src="images/dog-image-1.jpg" alt="">
+                <img src="images/dog-image-2.jpg" alt="">
+                <img src="images/dog-image-3.jpg" alt="">
+              </div>
+
               <p>Here are a few pictures. She’s a happy girl!</p>
               <p>Can you make it?</p>
             </div>
-            <div>
+            <div class="msg-from-sender chat-bottom-left">
               <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
-              <p class="gradient-txt">30 minute walk <span class="bold-txt">$29</span></p>
-              <p class="gradient-txt">1 hour walk<span class="bold-txt">$49</span></p>
+              <p class="gradient-txt">30 minute walk <span class="cost bold-txt">$29</span></p>
+              <p class="gradient-txt">1 hour walk<span class="cost bold-txt">$49</span></p>
             </div>
+
             <input type="text" placeholder="Type a message...">
+
           </div>
         </div>
       </div>
