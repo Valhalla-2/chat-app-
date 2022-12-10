@@ -170,6 +170,11 @@ section {
   align-self: flex-end;
 }
 
+.dog-images {
+  text-align: right;
+  animation: msg 2000ms ease-in-out 1;
+}
+
 .msg-from-receiver img {
   width: 47px;
   border-radius: 15px;
@@ -252,6 +257,24 @@ input::placeholder {
 
 }
 
+.msg-type-send {
+  position: relative;
+}
+
+.msg-type-send input {
+  width: 100%;
+}
+
+.msg-type-send button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  right: 4px;
+  border: none;
+  top: 2px;
+  background-color: #000;
+}
 
 @keyframes mobile {
   from {
