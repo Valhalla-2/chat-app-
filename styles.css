@@ -156,8 +156,41 @@ section {
   padding: 8px 10px;
   margin: 10px 0;
   width: 70%;
-  animation: msg 2000ms ease-in-out 1;
+  animation: msg 400ms ease-in-out 1 forwards;
   transform-origin: bottom center;
+  opacity: 0;
+}
+
+.msg-left1 {
+  animation-delay: 3s !important;
+}
+
+.msg-left2 {
+  animation-delay: 4s !important;
+}
+
+.msg-right1 {
+  animation-delay: 5s !important;
+}
+
+.msg-right2 {
+  animation-delay: 6s !important;
+}
+
+.msg-right3 {
+  animation-delay: 7s !important;
+}
+
+.msg-left3 {
+  animation-delay: 8s !important;
+}
+
+.msg-left4 {
+  animation-delay: 9s !important;
+}
+
+.msg-left5 {
+  animation-delay: 10s !important;
 }
 
 .msg-from-sender p {
@@ -172,7 +205,8 @@ section {
 
 .dog-images {
   text-align: right;
-  animation: msg 2000ms ease-in-out 1;
+  animation: msg 400ms ease-in-out 1 forwards;
+  opacity: 0;
 }
 
 .msg-from-receiver img {
@@ -274,7 +308,11 @@ input::placeholder {
   border: none;
   top: 2px;
   background-color: #000;
+  opacity: 0;
+  animation: msg 400ms ease-in-out 1 forwards 11s;
 }
+
+
 
 @keyframes mobile {
   from {
